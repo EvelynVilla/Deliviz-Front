@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "Deliviz",
+    "slug": "deliviz-repartidor",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FFFFFF"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.deliviz.repartidor"
+    },
+    "android": {
+      "package": "com.deliviz.repartidor",
+      "adaptiveIcon": {
+        "backgroundColor": "#FFFFFF",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-font",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Deliviz usa la cámara para escanear guías y tomar las fotos de evidencia de cada paquete.",
+          "recordAudioAndroid": false
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Deliviz guarda tu ubicación con cada evento del paquete para comprobar dónde se registró."
+        }
+      ]
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  // Base oficial de Expo: ya trae jsx react-jsx, moduleResolution "bundler", noEmit y skipLibCheck.
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    // Rigor completo en los archivos .ts/.tsx nuevos.
+    "strict": true,
+
+    // Coexistencia JS + TS:
+    //  - allowJs: los .tsx pueden importar los .js de Sayuri (y al revés) y TypeScript
+    //    infiere sus tipos. Los componentes .js compartidos declaran sus props con JSDoc
+    //    (/** @param {{...}} props */) para que las props opcionales no se marquen como obligatorias.
+    //  - checkJs: false: los .js NO se revisan con reglas de TypeScript, así el código de las
+    //    compañeras compila tal cual. Para revisar uno en particular, agrega // @ts-check arriba.
+    "allowJs": true,
+    "checkJs": false
+  },
+  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"]
+}
